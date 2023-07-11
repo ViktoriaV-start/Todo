@@ -1,0 +1,324 @@
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #E8FFF9;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+input,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.str0 {
+  stroke: #4a7989;
+  stroke-width: 0.39;
+  stroke-miterlimit: 22.9256;
+}
+
+.fil1 {
+  fill: #FFDBB8;
+}
+
+.fil2 {
+  fill: #e6c6a7;
+}
+
+.fil0 {
+  fill: #4a7989;
+}
+
+.fil3 {
+  fill: #6e8e99;
+}
+
+.fil4 {
+  fill: #3c616d;
+}
+
+.svg {
+  margin-left: 2%;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  width: 5rem;
+  height: 6rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+.header__wrap {
+  background-color: #FFE8CF;
+}
+.header__title {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 2rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #4a7989;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin: 3rem auto 0;
+  padding: 0 100px 5rem 100px;
+}
+.content__text, .content__text_gr {
+  font-size: 1.4rem;
+  width: 780px;
+  font-family: "Roboto", sans-serif;
+  color: #31494f;
+  font-weight: 600;
+  padding: 1rem 0 1rem 1rem;
+  background-color: #ffffff;
+  outline: none;
+}
+.content__checkbox {
+  width: 3.5rem;
+  height: 3.5rem;
+  outline-color: rgb(218, 217, 217);
+}
+.content__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.content__item:hover {
+  box-shadow: 8px 9px 9px 0px rgba(0, 0, 0, 0.16);
+}
+.content__btn {
+  background-color: #fcad96;
+  border-color: #fcad96;
+  color: #ffffff;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2.3rem;
+}
+.content__btn:hover {
+  border-color: #fd7d58;
+  background-color: #fd7d58;
+}
+
+.bggray {
+  background-color: #dce9ee;
+  font-weight: 300;
+}
+
+.line {
+  text-decoration-line: line-through;
+}
+
+.colored {
+  background-color: #00ffff;
+}
+
+.form {
+  margin: 5rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form__input {
+  font-size: 1.6rem;
+  color: #31494f;
+  padding-left: 8px;
+  width: 800px;
+  height: 5rem;
+  border-radius: 7px;
+  border: none;
+}
+.form__input:focus-visible {
+  outline: none;
+  box-shadow: 8px 9px 9px 0px rgba(0, 0, 0, 0.16);
+}
+.form__btn {
+  border-color: #4a7989;
+  background-color: #4a7989;
+  margin-left: 0.8rem;
+  width: 130px;
+  height: 3.9rem;
+  align-self: center;
+  border-radius: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.form__btn:hover {
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16);
+  background-color: #5eabc4;
+  border-color: #5eabc4;
+}
+
+.control {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.control__btn {
+  border-color: #4a7989;
+  background-color: #4a7989;
+  width: 200px;
+  height: 3.1rem;
+  align-self: center;
+  border-radius: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.control__btn:hover {
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16);
+  background-color: #5eabc4;
+  border-color: #5eabc4;
+}/*# sourceMappingURL=index.css.map */
