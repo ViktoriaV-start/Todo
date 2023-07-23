@@ -8,8 +8,8 @@ export class InputStore {
     makeAutoObservable(this);
   }
 
-  putValue(e) {
-    this.todoText = this.checkInput(e.target.value);
+  putValue(text) {
+    this.todoText = this.checkInput(text);
   }
 
   checkInput(value) {

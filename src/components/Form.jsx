@@ -1,8 +1,9 @@
-import { useContext, useEffect, useRef } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { StoreContext } from "../context/StoreContext"
 import { observer } from "mobx-react-lite";
 
-export const Form = observer(({ fetching }) => {
+export const Form = observer(() => {
+  const [text, setText] = useState('');
   const { todoStore } = useContext(StoreContext);
   const { inputStore } = useContext(StoreContext);
   
@@ -11,6 +12,11 @@ export const Form = observer(({ fetching }) => {
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
+
+  const handleChange = (e) => {
+    setText(e.target.value);
+    inputStore.putValue(text);
+  }
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -24,7 +30,7 @@ export const Form = observer(({ fetching }) => {
     };
     todoStore.addTodo(newTodo);
     inputStore.todoText = '';
-    inputRef.current.value = '';
+    setText('');
     }
   };
 
@@ -38,9 +44,10 @@ export const Form = observer(({ fetching }) => {
     <div className="container">
       <form className="form" onSubmit={handleClick}>
         <input className="form__input"
-               type="search"
+               type="text"
+               value={text}
                placeholder="Новая задача"
-               onChange={(e) => inputStore.putValue(e)}
+               onChange={handleChange}
                ref={inputRef}
         >
         </input>

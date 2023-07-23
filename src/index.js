@@ -9,7 +9,7 @@ import { InputStore } from './store/InputStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StoreContext.Provider value = {{todoStore: new TodoStore(), inputStore: new InputStore}}>
+  <StoreContext.Provider value = {{todoStore: new TodoStore(), inputStore: new InputStore()}}>
     <App />
   </StoreContext.Provider>
 );
