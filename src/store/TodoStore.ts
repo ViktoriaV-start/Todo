@@ -1,19 +1,20 @@
 import { makeAutoObservable } from "mobx";
 import { INITIAL_TODO_ARRAY } from "../config/constants";
+import { ITodo, ITodoStore } from "../interfaces/interfaces";
 
 
-export class TodoStore {
-  todoList = INITIAL_TODO_ARRAY;
+export class TodoStore implements ITodoStore {
+  todoList: ITodo[] = INITIAL_TODO_ARRAY;
   
   constructor() {
     makeAutoObservable(this);
   }
 
-  addTodo(todo) {
+  addTodo(todo: ITodo) {
     this.todoList.unshift(todo);
   }
 
-  removeTodo(todo) {
+  removeTodo(todo: ITodo) {
     this.todoList = this.todoList.filter(elem => elem.id !== todo.id);
   }
 
@@ -25,7 +26,7 @@ export class TodoStore {
     this.todoList.pop();
   }
 
-  completeTodo(todo) {
+  completeTodo(todo: ITodo) {
     todo.completed = !todo.completed;
     if(todo.completed) {
       this.removeTodo(todo);
@@ -33,7 +34,7 @@ export class TodoStore {
     }
   }
 
-  updateTodo(todo, text) {
+  updateTodo(todo: ITodo, text: string) {
     todo.todo = text;
   }
 }

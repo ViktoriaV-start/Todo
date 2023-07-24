@@ -1,5 +1,6 @@
+import { ITodo } from "../interfaces/interfaces";
 
-export const INITIAL_TODO_ARRAY = [
+export const INITIAL_TODO_ARRAY: ITodo[] = [
   {
     id: 1,
     todo: 'Отправить копии документов в понедельник',

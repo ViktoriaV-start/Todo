@@ -7,7 +7,7 @@ import { TodoStore } from './store/TodoStore';
 import { InputStore } from './store/InputStore';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <StoreContext.Provider value = {{todoStore: new TodoStore(), inputStore: new InputStore()}}>
     <App />

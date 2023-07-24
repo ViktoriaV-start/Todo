@@ -2,25 +2,26 @@ import { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
 import { Button } from "./Button";
 import { ThemeContext } from "../context/ThemeContext";
+import { IStore, ITheme } from "../interfaces/interfaces";
 
 export const ControlButtons = () => {
-  const { todoStore } = useContext(StoreContext);
-  const { toggleThemeOdd } = useContext(ThemeContext);
-  const { toggleThemeEven } = useContext(ThemeContext);
+  const { todoStore } : IStore = useContext(StoreContext);
+  const { toggleThemeOdd } : ITheme = useContext(ThemeContext);
+  const { toggleThemeEven } : ITheme = useContext(ThemeContext);
 
-  const removeFirst = () => {
+  const removeFirst = (): void => {
     todoStore.removeFirst();
   };
 
-  const removeLast = () => {
+  const removeLast = (): void => {
     todoStore.removeLast();
   };
 
-  const colourEven = () => {
+  const colourEven = (): void => {
     toggleThemeEven();
   };
 
-  const colourOdd = () => {
+  const colourOdd = (): void => {
     toggleThemeOdd();
   };
 

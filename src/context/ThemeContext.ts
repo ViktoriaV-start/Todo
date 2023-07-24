@@ -1,6 +1,7 @@
+import { ITheme } from './../interfaces/interfaces';
 import React from 'react';
 
-export const ThemeContext = React.createContext(
+export const ThemeContext = React.createContext<ITheme>(
     {
         themeOdd: '',
         themeEven: '',

@@ -1,18 +1,18 @@
 import { makeAutoObservable } from "mobx";
+import { IInput } from "../interfaces/interfaces";
 
-
-export class InputStore {
-  todoText = '';
+export class InputStore implements IInput {
+  todoText: string = '';
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  putValue(text) {
+  putValue(text: string) {
     this.todoText = this.checkInput(text);
   }
 
-  checkInput(value) {
+  checkInput(value: string) {
     let checkedValue = value.trim().slice(0, 255);
     if(!checkedValue) return checkedValue = '';
 
