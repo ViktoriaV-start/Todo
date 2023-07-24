@@ -1,6 +1,8 @@
 # TODO
 <https://viktoriav-start.github.io/Todo/>
 
+- ветка typescript-realisation - Реализация с использованием TypeScript
+
 ## Задача - Реализовать Todo List
 
 ### Описание задачи:
